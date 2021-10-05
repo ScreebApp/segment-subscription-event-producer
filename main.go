@@ -13,7 +13,7 @@ import (
 var (
 	requests    = kingpin.Flag("requests", "requests").Short('n').Default("100").Int()
 	concurrency = kingpin.Flag("concurrency", "concurrency").Short('c').Default("2").Int()
-	endpointURL = kingpin.Flag("endpoint-url", "endpoint-url").Short('e').Default("http://localhost:8080/webhook").String()
+	endpointURL = kingpin.Flag("endpoint-url", "endpoint-url").Short('e').String()
 	token       = kingpin.Flag("token", "token").Default("xxxx").Short('t').String()
 
 	apiKey string
