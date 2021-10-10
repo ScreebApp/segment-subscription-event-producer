@@ -110,7 +110,7 @@ func buildRequestCommon(eventType SegmentEventType) SegmentEventBody {
 		ReceivedAt:  receivedAt,
 		Timestamp:   timestamp,
 		Type:        eventType,
-		ProjectID:   "benchmark-segment-subscription",
+		ProjectID:   "segment-subscription-event-producer",
 		Replay:      false,
 		UserID:      _user,
 		AnonymousID: _anonymousID,
