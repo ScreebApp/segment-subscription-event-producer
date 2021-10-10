@@ -46,9 +46,9 @@ This tool only support basic token authentication.
 ## Run
 
 ```bash
-go get github.com/ScreebApp/benchmark-segment-subscription
+go get github.com/ScreebApp/segment-subscription-event-producer
 
-go run github.com/ScreebApp/benchmark-segment-subscription \
+go run github.com/ScreebApp/segment-subscription-event-producer \
 	--requests 10000 \
 	--concurrency 100 \
 	--endpoint-url http://localhost:3000/webhook \

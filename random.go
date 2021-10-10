@@ -102,25 +102,17 @@ func pureString(str string) string {
 	return str
 }
 
-var letterRunes = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+// var letterRunes = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
-func RandStringRunes(n int) string {
-	b := make([]rune, n)
-	for i := range b {
-		b[i] = letterRunes[rand.Intn(len(letterRunes))]
-	}
-	return string(b)
-}
+// func RandStringRunes(n int) string {
+// 	b := make([]rune, n)
+// 	for i := range b {
+// 		b[i] = letterRunes[rand.Intn(len(letterRunes))]
+// 	}
+// 	return string(b)
+// }
 
 func RandPageTitle() string {
-	// part := []string{}
-
-	// for i := 0; i < 2+rand.Intn(5); i++ {
-	// 	part = append(part, RandStringRunes(2+rand.Intn(6)))
-	// }
-
-	// return strings.Join(part, " ") + " | " + RandStringRunes(2+rand.Intn(6))
-
 	return gofakeit.Dessert() + " | " + gofakeit.Company()
 }
 

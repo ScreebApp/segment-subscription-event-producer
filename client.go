@@ -44,8 +44,11 @@ func sendWebhookRequest(body interface{}) error {
 		return err
 	}
 
-	io.Copy(ioutil.Discard, resp.Body)
 	defer resp.Body.Close()
+	_, err = io.Copy(ioutil.Discard, resp.Body)
+	if err != nil {
+		return err
+	}
 
 	if resp.StatusCode >= 400 {
 		return fmt.Errorf("status code: %s", resp.Status)
